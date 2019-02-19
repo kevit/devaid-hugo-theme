@@ -1,0 +1,20 @@
+# theme.toml template for a Hugo theme
+
+name = "DevAid"
+license = "MIT"
+licenselink = "https://github.com/kevit/devaid-hugo-theme/blob/master/LICENSE.md"
+description = ""
+homepage = "https://github.com/xriley/devAid-Theme"
+tags = []
+features = []
+min_version = "0.37.1"
+
+[author]
+  name = "kevit"
+  homepage = "http://kevit.info"
+
+# If porting an existing theme
+[original]
+  name = "DevAid"
+  homepage = "https://themes.3rdwavemedia.com/bootstrap-templates/startup/devaid-free-bootstrap-theme-for-developers-side-projects/"
+  repo = "https://github.com/xriley/devAid-Theme"
