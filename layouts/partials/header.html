@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{if .IsHome}}{{ $.Site.title }}{{else}}{{.}}{{end}}</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Description}}{{end}}">
+    <meta name="author" content="{{ $.Site.Params.author }}">    
+    <link rel="shortcut icon" href="favicon.ico">  
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> 
+    <!-- FontAwesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
+    <!-- Global CSS -->
+    {{ $maincss := “css/bootstrap.min.css” } <link rel=“stylesheet” href="{ $maincss | absurl }" type=“text/css” />
+      <!-- Plugins CSS -->    
+    {{ $plugincss := plugins/prism/prism.css” } <link rel=“stylesheet” href="{ $plugincss | absurl }" type=“text/css” />
+    <!-- Theme CSS -->  
+    {{ $themecss := "css/theme-1.css” } <link id="theme-style" rel=“stylesheet” href="{ $themecss | absurl }" type=“text/css” />
+    <!-- GitHub Button -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script> 
+</head> 
+
+<body data-spy="scroll">
+	
+    
+
+    <!---//Facebook button code-->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    
+    <!-- ******HEADER****** --> 
+    <header id="header" class="header">  
+        <div class="container">            
+            <h1 class="logo float-left">
+                <a class="scrollto" href="#promo">
+                    <span class="logo-title">"{{ $.Site.Params.logoTitle }}"</span>
+                </a>
+            </h1><!--//logo-->              
+            {{ partial "nav.html" . }}
+        </div>
+    </header><!--//header-->
