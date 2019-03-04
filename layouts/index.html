@@ -1,32 +1,27 @@
 {{ partial "header.html" . }}
     <!-- ******PROMO****** -->
     {{range where .Site.Pages "Type" "=" "promo"}} 
-    {{ .Content }} 
     {{ .Render "promo"}}
     {{ end }} 
     
     <!-- ******ABOUT****** --> 
     {{range where .Site.Pages "Type" "=" "about"}} 
-    {{ .Content }} 
     {{ .Render "about"}}
     {{ end }} 
     
     <!-- ******FEATURES****** --> 
     {{range where .Site.Pages "Type" "=" "features"}} 
-    {{ .Content }} 
     {{ .Render "features"}}
     {{ end }} 
 
     <!-- ******DOCS****** --> 
     {{range where .Site.Pages "Type" "=" "docs"}} 
-    {{ .Content }} 
     {{ .Render "docs"}}
     {{ end }} 
     
     <!-- ******CONTACT****** --> 
 
     {{range where .Site.Pages "Type" "=" "contact"}} 
-    {{ .Content }} 
     {{ .Render "contact"}}
     {{ end }} 
       
